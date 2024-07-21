@@ -41,10 +41,10 @@
     overflow: hidden;
     white-space: nowrap;
     /* margin: 0 auto; */
-    animation: typing 6.5s forwards;
+    animation: type 6.5s forwards;
 }
 
-@keyframes typing{
+@keyframes type{
     from{width: 0}
     to{width: 100%}
 }
@@ -61,4 +61,60 @@
     margin-top: -3vmax;
     color: #141c3c;
     -webkit-text-stroke: 0.05vw whitesmoke;
+}
+
+.work{
+    color: aliceblue;
+    padding-left: 160px;
+    margin-top: -19px;
+    font-size: 2vw;
+}
+
+.work span{
+    position: relative;
+}
+
+.work span::before{
+    content: "Web Developer";
+    color: burlywood;
+    animation: words 15s infinite;
+}
+
+.work span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    /* background-color: cornflowerblue; */
+    background-color: #141c3c;
+    border-left: 2px solid burlywood;
+    right: -8px;
+    animation: cursor .8s infinite, typing 25s steps(18) infinite;
+}
+
+@keyframes cursor {
+        to{
+            border-left: 2px solid #141c3c;
+        }
+}
+
+@keyframes words{
+    0%,33.33%{
+        content: "Web Developer";
+    }
+    33.40%,66.66%{
+        content: "Programmer";
+    }
+    66.70%,100%{
+        content: "Cloud Enthusiast";
+    }
+}
+
+@keyframes typing{
+    10%,15%,20%,25%,30%,35%,40%,45%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
 }
