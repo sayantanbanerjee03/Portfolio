@@ -86,7 +86,7 @@
     width: calc(100% + 8px);
     height: 100%;
     /* background-color: cornflowerblue; */
-    background-color: #141c3c;
+    background-color: #13264D;
     border-left: 2px solid burlywood;
     right: -8px;
     animation: cursor .8s infinite, typing 25s steps(18) infinite;
